@@ -6,6 +6,7 @@ import UnauthorizedView from "../views/UnauthorizedView.vue";
 import InsertView from "../views/restricted/InsertView.vue";
 import DeleteView from "../views/restricted/DeleteView.vue";
 import UpdateView from "../views/restricted/UpdateView.vue";
+import MapView from "../views/Map.vue"
 
 let localUser;
 
@@ -47,6 +48,11 @@ const router = createRouter({
       path: "/delete",
       name: "delete",
       component: DeleteView,
+    },
+    {
+      path: "/map",
+      name: "map",
+      component: MapView,
     },
   ],
 });

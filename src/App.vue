@@ -22,6 +22,7 @@ onMounted(() => {
     <RouterLink class="border p-3 w-40 text-center border-orange-500" to="/secret">Secret</RouterLink>
     <RouterLink class="border p-3 w-40 text-center border-yellow-500" to="/login">Login</RouterLink>
     <RouterLink class="border p-3 w-40 text-center border-green-500" to="/unauthorized">Unauthorized</RouterLink>
+    <RouterLink class="border p-3 w-40 text-center border-white" to="/map">Map</RouterLink>
   </div>
 
   <div class="links gap-3 flex flex-wrap mt-10">
@@ -36,3 +37,35 @@ onMounted(() => {
 
   <RouterView />
 </template>
+
+<style scoped>
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+}
+
+body {
+  margin: 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background:#4A8FED;
+    padding:10px;
+    color:#fff;
+    font:inherit;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+</style>
