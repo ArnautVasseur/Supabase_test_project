@@ -3,15 +3,22 @@ import { ref, onMounted } from 'vue'
 import { supabase } from './lib/supabaseClient'
 import { RouterLink, RouterView } from 'vue-router'
 
-const countries = ref([])
+const pathologies = ref([])
+const soins = ref([])
 
-async function getCountries() {
-  const { data } = await supabase.from('countries').select()
-  countries.value = data
+async function getpathologies() {
+  const { data } = await supabase.from('pathologies').select()
+  pathologies.value = data
+}
+
+async function getsoins() {
+  const { data } = await supabase.from('soins').select()
+  soins.value = data
 }
 
 onMounted(() => {
-  getCountries()
+  getpathologies(),
+  getsoins()
 })
 </script>
 
@@ -31,8 +38,13 @@ onMounted(() => {
     <RouterLink class="border p-3 w-40 text-center border-purple-500" to="/delete">Delete</RouterLink>
   </div>
 
-  <ul class="text-red-600 border mt-20 flex flex-col items-center justify-center gap-3 p-5">
-    <li class="" v-for="country in countries" :key="country.id">{{ country.name }}</li>
+  <!-- <ul class="border mt-20 flex flex-col items-center justify-center gap-3 p-5">
+    <li v-for="patho in pathologies" :key="patho.id">{{ patho.name }}</li>
+  </ul> -->
+
+  <ul v-for="soin in soins" :key="soin.id" class="border mt-5 flex flex-col items-center justify-center gap-3 p-5">
+    <li>{{ soin.name }}</li>
+    <img class="w-10 h-10" :src="soin.image_url" alt="">
   </ul>
 
   <RouterView />

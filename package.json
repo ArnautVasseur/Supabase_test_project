@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.38.2",
+    "@supabase/supabase-js": "^2.38.5",
     "jspdf": "^2.5.1",
     "leaflet": "^1.9.4",
     "pspdfkit": "^2023.5.0",

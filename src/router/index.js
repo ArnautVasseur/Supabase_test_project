@@ -7,6 +7,8 @@ import InsertView from "../views/restricted/InsertView.vue";
 import DeleteView from "../views/restricted/DeleteView.vue";
 import UpdateView from "../views/restricted/UpdateView.vue";
 import MapView from "../views/Map.vue"
+import PDFView from "../views/GeneratePDF.vue"
+import UploadView from "../views/UploadFile.vue"
 
 let localUser;
 
@@ -53,6 +55,16 @@ const router = createRouter({
       path: "/map",
       name: "map",
       component: MapView,
+    },
+    {
+      path: "/pdf",
+      name: "pdf",
+      component: PDFView,
+    },
+    {
+      path: "/upload",
+      name: "upload",
+      component: UploadView,
     },
   ],
 });

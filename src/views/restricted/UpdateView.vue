@@ -1,16 +1,16 @@
 <script setup>
 
 import { supabase } from '../../lib/supabaseClient'
-import { countries, updateCountries } from '../../lib/supabaseFunctions';
+import { pathologies, updatepathologies } from '../../lib/supabaseFunctions';
 import { ref, onMounted } from 'vue';
 
-async function getCountries() {
-  const { data } = await supabase.from('countries').select()
-  countries.value = data
+async function getpathologies() {
+  const { data } = await supabase.from('pathologies').select()
+  pathologies.value = data
 }
 
 onMounted(() => {
-  getCountries()
+  getpathologies()
 })
 
 const result = ref()
@@ -22,14 +22,14 @@ const result = ref()
         <input class="text-black m-5" type="text" id="inputvalue_update" placeholder="Nouveau Nom">
         <select class="text-black" v-model="result" id="filter_update">
             <option disabled value="" class="text-black">Please select one</option>
-            <option class="text-black" v-for="country in countries" :key="country.id">
-                {{ country.name }}
+            <option class="text-black" v-for="patho in pathologies" :key="patho.id">
+                {{ patho.name }}
             </option>
         </select>
 
         <div class="m-5">Selected: {{ result }}</div>
 
-        <button class="border p-3 m-5" @click="updateCountries">
+        <button class="border p-3 m-5" @click="updatepathologies">
             Update here
         </button>
     </div>
