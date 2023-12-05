@@ -9,6 +9,7 @@ import UpdateView from "../views/restricted/UpdateView.vue";
 import MapView from "../views/Map.vue"
 import PDFView from "../views/GeneratePDF.vue"
 import UploadView from "../views/UploadFile.vue"
+import ModifyPDF from "../views/ModifyPDF.vue"
 
 let localUser;
 
@@ -65,6 +66,11 @@ const router = createRouter({
       path: "/upload",
       name: "upload",
       component: UploadView,
+    },
+    {
+      path: "/modifypdf",
+      name: "modifypdf",
+      component: ModifyPDF,
     },
   ],
 });

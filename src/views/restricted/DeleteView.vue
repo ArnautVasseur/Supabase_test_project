@@ -49,6 +49,8 @@ const result = ref()
     <button class="border p-3 m-5" @click="deletesoins">
         delete here
     </button>
+
+    <div id="successMessage" style="display: none; color: red;"></div>
 </template>
 
 <style>

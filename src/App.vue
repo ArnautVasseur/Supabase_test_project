@@ -29,7 +29,8 @@ onMounted(() => {
     <RouterLink class="border p-3 w-40 text-center border-orange-500" to="/secret">Secret</RouterLink>
     <RouterLink class="border p-3 w-40 text-center border-yellow-500" to="/login">Login</RouterLink>
     <RouterLink class="border p-3 w-40 text-center border-green-500" to="/unauthorized">Unauthorized</RouterLink>
-    <RouterLink class="border p-3 w-40 text-center border-white" to="/map">Map</RouterLink>
+    <RouterLink class="border p-3 w-40 text-center border-blue-500" to="/map">Map</RouterLink>
+    <RouterLink class="border p-3 w-40 text-center border-white" to="/modifypdf">Devis</RouterLink>
   </div>
 
   <div class="links gap-3 flex flex-wrap mt-10">

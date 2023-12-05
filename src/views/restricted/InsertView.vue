@@ -18,6 +18,8 @@ import { insertpathologies, insertsoins } from '../../lib/supabaseFunctions';
         <button class="border p-3 m-5" @click="insertsoins">
             Insert here
         </button>
+
+        <div id="successMessage" style="display: none; color: green;"></div>
     </div>
 </template>
 
